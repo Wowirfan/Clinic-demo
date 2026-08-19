@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lumeraa Aesthetics — Premium skin, hair transplant and aesthetic treatments by Dr Suraksha.">
+<title>Lumeraa Aesthetics — Skin & Hair Clinic</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#2F1410;color:#f5f0eb;overflow-x:hidden}
+.font-serif{font-family:'Playfair Display',serif}
+.gold-gradient{
+ background:linear-gradient(135deg,#d4a373,#f5d6b3,#d4a373);
+ -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+}
+.glass-card{
+ background:rgba(255,255,255,.04);backdrop-filter:blur(12px);
+ -webkit-backdrop-filter:blur(12px);border:1px solid rgba(212,163,115,.15)
+}
+.glass-card-light{
+ background:rgba(255,255,255,.06);backdrop-filter:blur(8px);
+ -webkit-backdrop-filter:blur(8px);border:1px solid rgba(212,163,115,.10)
+}
+.btn-gold{
+ background:linear-gradient(135deg,#d4a373,#b8895c);color:#0a0a0f;
+ font-weight:600;transition:.3s;border:none
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(212,163,115,.35)}
+.btn-outline-gold{
+ border:2px solid #d4a373;color:#d4a373;background:transparent;font-weight:600;transition:.3s
+}
+.btn-outline-gold:hover{background:#d4a373;color:#0a0a0f;transform:translateY(-2px)}
+.hero-gradient{
+ background:
+ radial-gradient(ellipse at 30% 20%,rgba(212,163,115,.12),transparent 60%),
+ radial-gradient(ellipse at 70% 80%,rgba(212,163,115,.06),transparent 50%),#2F1410
+}
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(212,163,115,.3),transparent);width:80%;margin:auto}
+.navbar{transition:.5s;padding-top:1rem;
+        background: rgba(245, 226, 194, 0.75);
+    padding-bottom:1rem}
+.navbar-scrolled{
+ background:rgba(245, 226, 194, 0.75);backdrop-filter:blur(16px);
+ -webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(212,163,115,.1);
+ padding-top:.6rem;padding-bottom:.6rem
+}
+.logo-img{width:190px;height:auto;display:block;object-fit:contain}
+@media(min-width:640px){.logo-img{width:220px}}
+@media(max-width:767px){.logo-img{width:155px}}
+.mobile-menu{
+ position:fixed;inset:0;z-index:60;background:#2F1410;
+ backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+ display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.7rem;
+ transform:translateX(100%);transition:.4s cubic-bezier(.23,1,.32,1)
+}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{color:#c4b8ae;font-size:1.4rem;font-weight:300;text-decoration:none}
+.mobile-menu a:hover{color:#d4a373}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.float-animation{animation:float 6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.9)}}
+.pulse-dot{animation:pulse 2s ease-in-out infinite}
+.reveal,.reveal-left,.reveal-right,.reveal-scale{
+ opacity:0;transition:all .8s cubic-bezier(.23,1,.32,1)
+}
+.reveal{transform:translateY(40px)}
+.reveal-left{transform:translateX(-40px)}
+.reveal-right{transform:translateX(40px)}
+.reveal-scale{transform:scale(.92)}
+.visible{opacity:1!important;transform:none!important}
+.stagger-children>*{opacity:0;transform:translateY(30px);transition:all .6s cubic-bezier(.23,1,.32,1)}
+.stagger-children.visible>*{opacity:1;transform:none}
+.stagger-children.visible>*:nth-child(1){transition-delay:.05s}
+.stagger-children.visible>*:nth-child(2){transition-delay:.10s}
+.stagger-children.visible>*:nth-child(3){transition-delay:.15s}
+.stagger-children.visible>*:nth-child(4){transition-delay:.20s}
+.stagger-children.visible>*:nth-child(5){transition-delay:.25s}
+.stagger-children.visible>*:nth-child(6){transition-delay:.30s}
+.stagger-children.visible>*:nth-child(7){transition-delay:.35s}
+.stagger-children.visible>*:nth-child(8){transition-delay:.40s}
+.glow-gold{box-shadow:0 0 60px rgba(212,163,115,.08)}
+.service-card{transition:.45s}
+.service-card:hover{transform:translateY(-7px)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#0a0a0f}
+::-webkit-scrollbar-thumb{background:#d4a373;border-radius:20px}
+::selection{background:rgba(212,163,115,.3);color:#f5f0eb}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}.float-animation{animation:none}
+ .reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger-children>*{transition:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+  <a href="#home" class="flex items-center" aria-label="Lumeraa Aesthetics home">
+   <img src="logo.png" alt="Lumeraa Aesthetics by Dr Suraksha" class="logo-img">
+  </a>
+
+  <div class="hidden md:flex items-center gap-7 text-sm font-light tracking-wide">
+   <a href="#home" class="text-[#c4b8ae] hover:text-[#d4a373] transition">Home</a>
+   <a href="#services" class="text-[#c4b8ae] hover:text-[#d4a373] transition">Services</a>
+   <a href="#offers" class="text-[#c4b8ae] hover:text-[#d4a373] transition">Offers</a>
+   <a href="#vampire-facial" class="text-[#c4b8ae] hover:text-[#d4a373] transition">Vampire Facial</a>
+   <a href="#contact" class="text-[#c4b8ae] hover:text-[#d4a373] transition">Contact</a>
+   <a href="#book-now" class="btn-gold px-6 py-2.5 rounded-full">Book Now</a>
+  </div>
+
+  <button id="menuToggle" class="md:hidden text-[#6b4215]" aria-label="Open menu">
+   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/>
+   </svg>
+  </button>
+ </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+ <button id="closeMenu" class="absolute top-6 right-6 text-[#c4b8ae]" aria-label="Close menu">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+   <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+ </button>
+ <a href="#home" class="mobile-link">Home</a>
+ <a href="#services" class="mobile-link">Services</a>
+ <a href="#offers" class="mobile-link">Offers</a>
+ <a href="#vampire-facial" class="mobile-link">Vampire Facial</a>
+ <a href="#contact" class="mobile-link">Contact</a>
+ <a href="#book-now" class="mobile-link btn-gold px-9 py-3.5 rounded-full">Book Free Consultation</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section id="home"
+    class="min-h-screen flex items-center relative overflow-hidden pt-28 pb-16">
+
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img
+            src="hair-transplant.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover object-center"
+        >
+
+        <!-- Dark overall overlay -->
+        <div class="absolute inset-0 bg-[#0a0a0f]/45"></div>
+
+        <!-- Brown fade from image to left -->
+        <div class="absolute inset-0 bg-gradient-to-r
+                    from-[#0a0a0f]
+                    via-[#2b180d]/90
+                    via-[45%]
+                    to-transparent">
+        </div>
+
+        <!-- Bottom fade -->
+        <div class="absolute inset-0 bg-gradient-to-t
+                    from-[#0a0a0f]
+                    via-transparent
+                    to-[#0a0a0f]/20">
+        </div>
+
+        <!-- Subtle gold/brown glow -->
+        <div class="absolute inset-0
+                    bg-[radial-gradient(circle_at_75%_45%,rgba(212,163,115,0.18),transparent_35%)]">
+        </div>
+    </div>
+
+    <!-- Existing hero content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT: Transform Your Look -->
+            <div class="reveal-left">
+
+                <span class="inline-block px-4 py-1.5 rounded-full
+                             border border-[#d4a373]/30
+                             text-[#d4a373]
+                             text-xs tracking-[.2em]
+                             uppercase mb-6
+                             bg-[#d4a373]/10 backdrop-blur-sm">
+                    ✦ Premium Aesthetics
+                </span>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl
+                           font-serif font-bold leading-[1.08] mb-6">
+
+                    Transform <br>
+
+                    <span class="gold-gradient">
+                        Your Look
+                    </span>
+
+                    <br>
+
+                    <span class="text-[#f0e7df]">
+                        Renew Confidence
+                    </span>
+
+                </h1>
+
+                <p class="text-[#d0c5ba] text-lg max-w-lg leading-relaxed mb-8">
+                    Experience personalized hair, skin and aesthetic treatments
+                    with expert care and a natural-looking approach.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+
+                    <a href="#book-now"
+                       class="btn-gold px-8 py-4 rounded-full
+                              flex items-center gap-2">
+
+                        Book Free Consultation
+
+                        <svg width="18" height="18"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2">
+
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+
+                        </svg>
+
+                    </a>
+
+                    <a href="#services"
+                       class="btn-outline-gold px-8 py-4 rounded-full
+                              backdrop-blur-sm">
+                        Explore Services
+                    </a>
+
+                </div>
+
+                <div class="flex flex-wrap items-center gap-6 mt-10">
+
+                    <div class="flex items-center gap-1">
+
+                        <span class="text-[#d4a373] text-lg">
+                            ★★★★★
+                        </span>
+
+                        <span class="text-[#c4b8ae] text-sm ml-2">
+                            4.9 rating
+                        </span>
+
+                    </div>
+
+                    <div class="w-px h-7 bg-[#d4a373]/30"></div>
+
+                    <span class="text-[#c4b8ae] text-sm">
+                        Personalized care
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE EMPTY / IMAGE AREA -->
+            <div class="hidden lg:block"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+ <!-- ─── BEFORE / AFTER ─────────────────────────────────────── -->
+<section id="before-after" class="py-24 px-4 sm:px-6 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-1/2 left-1/4 w-80 h-80 rounded-full bg-[#d4a373]/5 blur-3xl"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+        <div class="text-center mb-12 reveal">
+            <span class="text-[#d4a373] text-xs tracking-[0.3em] uppercase">Real Transformations</span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mt-2">
+                Before <span class="gold-gradient">&</span> After
+            </h2>
+            <p class="text-[#b0a69a] max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
+                See the difference. Explore selected treatment results and discover what personalized aesthetic care can achieve.
+            </p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto reveal-scale">
+            <div id="beforeAfterSlider"
+                 class="relative w-full h-[420px] sm:h-[520px] md:h-[600px] overflow-hidden rounded-[2rem] border border-[#d4a373]/25 shadow-[0_25px_80px_rgba(212,163,115,0.12)] select-none touch-none cursor-ew-resize">
+
+                <img src="after.jpg" alt="After treatment"
+                     class="absolute inset-0 w-full h-full object-cover object-center"
+                     draggable="false">
+
+                <div id="beforeClip"
+                     class="absolute inset-0 w-1/2 overflow-hidden z-10"
+                     style="width:50%;">
+                    <img src="before.jpg" alt="Before treatment"
+                         class="absolute top-0 left-0 w-full h-full object-cover object-center"
+                         draggable="false">
+                </div>
+
+                <div class="absolute top-5 left-5 z-30 pointer-events-none">
+                    <span class="px-4 py-2 rounded-full bg-[#0a0a0f]/75 backdrop-blur-md border border-[#d4a373]/20 text-[#f5f0eb] text-xs tracking-wider">
+                        BEFORE
+                    </span>
+                </div>
+
+                <div class="absolute top-5 right-5 z-30 pointer-events-none">
+                    <span class="px-4 py-2 rounded-full bg-[#f5e2c2]/90 text-[#6b4215] text-xs font-semibold tracking-wider">
+                        AFTER
+                    </span>
+                </div>
+
+                <div id="sliderLine"
+                     class="absolute top-0 bottom-0 z-20 w-[3px] bg-[#f5d6b3] pointer-events-none"
+                     style="left:50%;">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                                w-14 h-14 rounded-full bg-[#f5e2c2] border-2 border-[#d4a373]
+                                shadow-xl flex items-center justify-center">
+                        <span class="text-[#6b4215] text-xl font-bold">‹›</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-[#b0a69a] text-xs mt-4">← Drag the slider to compare →</p>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 px-4 sm:px-6">
+ <div class="max-w-7xl mx-auto">
+  <div class="text-center mb-16 reveal">
+   <span class="text-[#d4a373] text-xs tracking-[.3em] uppercase">Our Expertise</span>
+   <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mt-2">
+    Premium <span class="gold-gradient">Skin & Hair</span> Services
+   </h2>
+   <p class="text-[#b0a69a] max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
+    Explore aesthetic and hair-care treatments designed around your individual goals.
+   </p>
+  </div>
+
+  <div id="servicesGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
+   <div class="service-card glass-card rounded-2xl p-6">
+    <div class="text-4xl mb-4">💇</div><span class="inline-block text-[10px] tracking-[.15em] uppercase text-[#d4a373] bg-[#d4a373]/10 px-3 py-1 rounded-full mb-3">HAIR</span>
+    <h3 class="text-lg font-serif font-bold mb-2">Hair Transplant</h3>
+    <p class="text-[#b0a69a] text-sm leading-relaxed">Natural-looking hair restoration with a personalized treatment plan.</p>
+   </div>
+   <div class="service-card glass-card rounded-2xl p-6">
+    <div class="text-4xl mb-4">✨</div><span class="inline-block text-[10px] tracking-[.15em] uppercase text-[#d4a373] bg-[#d4a373]/10 px-3 py-1 rounded-full mb-3">HAIR</span>
+    <h3 class="text-lg font-serif font-bold mb-2">GFC / PRP Therapy</h3>
+    <p class="text-[#b0a69a] text-sm leading-relaxed">Growth-focused scalp treatments selected after professional assessment.</p>
+   </div>
+   <div class="service-card glass-card rounded-2xl p-6">
+    <div class="text-4xl mb-4">🧖</div><span class="inline-block text-[10px] tracking-[.15em] uppercase text-[#d4a373] bg-[#d4a373]/10 px-3 py-1 rounded-full mb-3">SKIN</span>
+    <h3 class="text-lg font-serif font-bold mb-2">Hydra Facial</h3>
+    <p class="text-[#b0a69a] text-sm leading-relaxed">Deep cleansing, hydration and skin-refreshing care for a radiant finish.</p>
+   </div>
+   <div class="service-card glass-card rounded-2xl p-6">
+    <div class="text-4xl mb-4">💉</div><span class="inline-block text-[10px] tracking-[.15em] uppercase text-[#d4a373] bg-[#d4a373]/10 px-3 py-1 rounded-full mb-3">AESTHETICS</span>
+    <h3 class="text-lg font-serif font-bold mb-2">Botox & Fillers</h3>
+    <p class="text-[#b0a69a] text-sm leading-relaxed">Aesthetic procedures planned according to individual facial needs.</p>
+   </div>
+   <div class="service-card glass-card rounded-2xl p-6">
+    <div class="text-4xl mb-4">🩸</div><span class="inline-block text-[10px] tracking-[.15em] uppercase text-[#d4a373] bg-[#d4a373]/10 px-3 py-1 rounded-full mb-3">PRP</span>
+    <h3 class="text-lg font-serif font-bold mb-2">Vampire Facial</h3>
+    <p class="text-[#b0a69a] text-sm leading-relaxed">PRP-based skin rejuvenation designed to support texture and radiance.</p>
+   </div>
+   <div class="service-card glass-card rounded-2xl p-6">
+    <div class="text-4xl mb-4">🔬</div><span class="inline-block text-[10px] tracking-[.15em] uppercase text-[#d4a373] bg-[#d4a373]/10 px-3 py-1 rounded-full mb-3">SKIN</span>
+    <h3 class="text-lg font-serif font-bold mb-2">Microneedling</h3>
+    <p class="text-[#b0a69a] text-sm leading-relaxed">Collagen-supporting skin treatment for texture and selected concerns.</p>
+   </div>
+   <div class="service-card glass-card rounded-2xl p-6">
+    <div class="text-4xl mb-4">🌟</div><span class="inline-block text-[10px] tracking-[.15em] uppercase text-[#d4a373] bg-[#d4a373]/10 px-3 py-1 rounded-full mb-3">LASER</span>
+    <h3 class="text-lg font-serif font-bold mb-2">Laser Treatments</h3>
+    <p class="text-[#b0a69a] text-sm leading-relaxed">Targeted laser options for pigmentation, acne scars and rejuvenation.</p>
+   </div>
+   <div class="service-card glass-card rounded-2xl p-6">
+    <div class="text-4xl mb-4">🌸</div><span class="inline-block text-[10px] tracking-[.15em] uppercase text-[#d4a373] bg-[#d4a373]/10 px-3 py-1 rounded-full mb-3">FACIAL</span>
+    <h3 class="text-lg font-serif font-bold mb-2">Advanced Facials</h3>
+    <p class="text-[#b0a69a] text-sm leading-relaxed">Premium facial therapies selected for your skin type and goals.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- OFFERS -->
+<section id="offers" class="py-24 px-4 sm:px-6 relative overflow-hidden">
+ <div class="absolute inset-0 bg-gradient-to-b from-[#d4a373]/5 via-transparent to-[#d4a373]/5 pointer-events-none"></div>
+ <div class="max-w-7xl mx-auto">
+  <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden reveal">
+   <div class="absolute top-0 right-0 w-64 h-64 bg-[#d4a373]/5 rounded-full blur-3xl"></div>
+   <div class="relative z-10 text-center">
+    <span class="inline-block px-5 py-1.5 rounded-full bg-[#d4a373]/10 text-[#d4a373] text-xs tracking-[.2em] uppercase mb-4">✨ Limited-Time Offers</span>
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-3">Exclusive <span class="gold-gradient">Clinic Offers</span></h2>
+    <p class="text-[#b0a69a] text-lg mb-8">Ask our team about current treatment packages and consultation offers.</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+     <div class="glass-card-light rounded-xl p-5"><p class="text-[#b0a69a] text-xs uppercase">Hair Revival</p><p class="font-serif text-lg mt-1">Hair Transplant</p><span class="inline-block mt-2 text-[#d4a373] font-bold text-sm bg-[#d4a373]/10 px-3 py-1 rounded-full">SPECIAL OFFER</span></div>
+     <div class="glass-card-light rounded-xl p-5"><p class="text-[#b0a69a] text-xs uppercase">Hair Revival</p><p class="font-serif text-lg mt-1">GFC & PRP Therapy</p><span class="inline-block mt-2 text-[#d4a373] font-bold text-sm bg-[#d4a373]/10 px-3 py-1 rounded-full">ASK US</span></div>
+     <div class="glass-card-light rounded-xl p-5"><p class="text-[#b0a69a] text-xs uppercase">Face Glow</p><p class="font-serif text-lg mt-1">Advanced Facials</p><span class="inline-block mt-2 text-[#d4a373] font-bold text-sm bg-[#d4a373]/10 px-3 py-1 rounded-full">SPECIAL OFFER</span></div>
+     <div class="glass-card-light rounded-xl p-5"><p class="text-[#b0a69a] text-xs uppercase">Skin Care</p><p class="font-serif text-lg mt-1">Meso & Microneedling</p><span class="inline-block mt-2 text-[#d4a373] font-bold text-sm bg-[#d4a373]/10 px-3 py-1 rounded-full">ASK US</span></div>
+    </div>
+
+    <div class="mt-8"><a href="#book-now" class="btn-gold px-10 py-4 rounded-full inline-flex items-center gap-2">Claim Your Offer →</a></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- VAMPIRE FACIAL -->
+<section id="vampire-facial" class="py-24 px-4 sm:px-6">
+ <div class="max-w-7xl mx-auto">
+  <div class="text-center mb-14 reveal">
+   <span class="text-[#d4a373] text-xs tracking-[.3em] uppercase">Science-Informed Care</span>
+   <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mt-2"><span class="gold-gradient">Vampire Facial</span><br><span class="text-[#c4b8ae] text-lg font-light">(PRP Therapy)</span></h2>
+   <p class="text-[#b0a69a] max-w-2xl mx-auto mt-3 text-sm">A PRP-based facial treatment performed after professional assessment and consultation.</p>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-12 items-start">
+   <div class="reveal-left">
+    <div class="glass-card rounded-3xl p-8">
+     <h3 class="text-2xl font-serif font-bold mb-2">Support Your Skin's <span class="gold-gradient">Natural Glow</span></h3>
+     <p class="text-[#b0a69a] text-sm leading-relaxed mb-6">PRP treatments use a patient's own blood components and are performed by qualified professionals according to individual suitability.</p>
+     <div class="space-y-3">
+      <div class="flex gap-3 text-sm"><span class="text-[#d4a373]">✓</span><span class="text-[#c4b8ae]">Supports skin texture and radiance</span></div>
+      <div class="flex gap-3 text-sm"><span class="text-[#d4a373]">✓</span><span class="text-[#c4b8ae]">May support collagen-related skin renewal</span></div>
+      <div class="flex gap-3 text-sm"><span class="text-[#d4a373]">✓</span><span class="text-[#c4b8ae]">Personalized treatment approach</span></div>
+      <div class="flex gap-3 text-sm"><span class="text-[#d4a373]">✓</span><span class="text-[#c4b8ae]">Professional aftercare guidance</span></div>
+     </div>
+    </div>
+   </div>
+
+   <div class="space-y-3 reveal-right">
+    <div class="glass-card-light rounded-xl p-4 flex gap-4"><div class="w-10 h-10 rounded-full bg-[#d4a373]/10 flex items-center justify-center text-[#d4a373] font-serif font-bold">01</div><div><p class="font-medium text-sm">Blood Collection</p><p class="text-[#b0a69a] text-xs mt-1">A small blood sample is collected by a trained professional.</p></div></div>
+    <div class="glass-card-light rounded-xl p-4 flex gap-4"><div class="w-10 h-10 rounded-full bg-[#d4a373]/10 flex items-center justify-center text-[#d4a373] font-serif font-bold">02</div><div><p class="font-medium text-sm">PRP Separation</p><p class="text-[#b0a69a] text-xs mt-1">The sample is processed to separate platelet-rich plasma.</p></div></div>
+    <div class="glass-card-light rounded-xl p-4 flex gap-4"><div class="w-10 h-10 rounded-full bg-[#d4a373]/10 flex items-center justify-center text-[#d4a373] font-serif font-bold">03</div><div><p class="font-medium text-sm">Preparation</p><p class="text-[#b0a69a] text-xs mt-1">The prepared PRP is readied for the selected treatment method.</p></div></div>
+    <div class="glass-card-light rounded-xl p-4 flex gap-4"><div class="w-10 h-10 rounded-full bg-[#d4a373]/10 flex items-center justify-center text-[#d4a373] font-serif font-bold">04</div><div><p class="font-medium text-sm">Application</p><p class="text-[#b0a69a] text-xs mt-1">PRP is applied using the technique selected by the clinician.</p></div></div>
+    <div class="glass-card-light rounded-xl p-4 flex gap-4"><div class="w-10 h-10 rounded-full bg-[#d4a373]/10 flex items-center justify-center text-[#d4a373] font-serif font-bold">05</div><div><p class="font-medium text-sm">Aftercare</p><p class="text-[#b0a69a] text-xs mt-1">You receive personalized post-treatment instructions.</p></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- WHY US -->
+<section class="py-24 px-4 sm:px-6">
+ <div class="max-w-7xl mx-auto">
+  <div class="text-center mb-14 reveal">
+   <span class="text-[#d4a373] text-xs tracking-[.3em] uppercase">Why Us</span>
+   <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2"><span class="gold-gradient">Expert Care</span> You Can Trust</h2>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12 stagger-children">
+   <div class="glass-card rounded-2xl p-6 text-center"><p class="text-3xl md:text-4xl font-serif font-bold gold-gradient">500+</p><p class="text-[#b0a69a] text-sm mt-1">Happy Clients</p></div>
+   <div class="glass-card rounded-2xl p-6 text-center"><p class="text-3xl md:text-4xl font-serif font-bold gold-gradient">4.9</p><p class="text-[#b0a69a] text-sm mt-1">Rating</p></div>
+   <div class="glass-card rounded-2xl p-6 text-center"><p class="text-3xl md:text-4xl font-serif font-bold gold-gradient">10+</p><p class="text-[#b0a69a] text-sm mt-1">Years Experience</p></div>
+   <div class="glass-card rounded-2xl p-6 text-center"><p class="text-3xl md:text-4xl font-serif font-bold gold-gradient">1:1</p><p class="text-[#b0a69a] text-sm mt-1">Personalized Care</p></div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 stagger-children">
+   <div class="glass-card-light rounded-xl p-5 text-center"><div class="text-2xl mb-3 text-[#d4a373]">✦</div><h4 class="font-medium text-sm">Natural-Looking Results</h4><p class="text-[#b0a69a] text-xs mt-1">Treatment plans focused on natural outcomes.</p></div>
+   <div class="glass-card-light rounded-xl p-5 text-center"><div class="text-2xl mb-3 text-[#d4a373]">✦</div><h4 class="font-medium text-sm">Advanced Approach</h4><p class="text-[#b0a69a] text-xs mt-1">Modern techniques selected for your needs.</p></div>
+   <div class="glass-card-light rounded-xl p-5 text-center"><div class="text-2xl mb-3 text-[#d4a373]">✦</div><h4 class="font-medium text-sm">Comfort-Focused</h4><p class="text-[#b0a69a] text-xs mt-1">A supportive and comfortable clinic experience.</p></div>
+   <div class="glass-card-light rounded-xl p-5 text-center"><div class="text-2xl mb-3 text-[#d4a373]">✦</div><h4 class="font-medium text-sm">Aftercare Support</h4><p class="text-[#b0a69a] text-xs mt-1">Guidance before and after your treatment.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-24 px-4 sm:px-6">
+ <div class="max-w-7xl mx-auto">
+  <div class="text-center mb-14 reveal">
+   <span class="text-[#d4a373] text-xs tracking-[.3em] uppercase">Testimonials</span>
+   <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2">What Our <span class="gold-gradient">Clients Say</span></h2>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
+   <div class="glass-card rounded-2xl p-6 flex flex-col"><div class="text-[#d4a373] mb-3">★★★★★</div><p class="text-[#c4b8ae] text-sm leading-relaxed flex-1">“The team was supportive throughout my treatment journey and explained everything clearly.”</p><div class="mt-4 pt-4 border-t border-[#d4a373]/10"><p class="font-medium text-sm">Priya S.</p></div></div>
+   <div class="glass-card rounded-2xl p-6 flex flex-col"><div class="text-[#d4a373] mb-3">★★★★★</div><p class="text-[#c4b8ae] text-sm leading-relaxed flex-1">“The Vampire Facial consultation was professional and my skin-care plan was explained very well.”</p><div class="mt-4 pt-4 border-t border-[#d4a373]/10"><p class="font-medium text-sm">Rahul M.</p></div></div>
+   <div class="glass-card rounded-2xl p-6 flex flex-col"><div class="text-[#d4a373] mb-3">★★★★★</div><p class="text-[#c4b8ae] text-sm leading-relaxed flex-1">“Professional, caring and attentive from consultation to aftercare.”</p><div class="mt-4 pt-4 border-t border-[#d4a373]/10"><p class="font-medium text-sm">Ananya K.</p></div></div>
+   <div class="glass-card rounded-2xl p-6 flex flex-col"><div class="text-[#d4a373] mb-3">★★★★★</div><p class="text-[#c4b8ae] text-sm leading-relaxed flex-1">“A very smooth experience with clear guidance and a welcoming team.”</p><div class="mt-4 pt-4 border-t border-[#d4a373]/10"><p class="font-medium text-sm">Vikram P.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-4 sm:px-6">
+ <div class="max-w-7xl mx-auto">
+  <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden reveal">
+   <div class="absolute top-0 right-0 w-96 h-96 bg-[#d4a373]/5 rounded-full blur-3xl"></div>
+
+   <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-start">
+    <div>
+     <span class="text-[#d4a373] text-xs tracking-[.3em] uppercase">Get Started</span>
+     <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2 mb-4">Book Your <span class="gold-gradient">Free Consultation</span></h2>
+     <p class="text-[#b0a69a] text-sm leading-relaxed max-w-md">Take the first step. Contact our team for treatment information and personalized guidance.</p>
+
+     <div class="mt-8 space-y-5">
+      <a href="tel:+919876543210" class="flex items-center gap-4 text-sm group">
+       <div class="w-10 h-10 rounded-full bg-[#d4a373]/10 flex items-center justify-center text-[#d4a373]">☎</div>
+       <div><p class="text-[#b0a69a] text-xs">Call Us</p><p class="font-medium group-hover:text-[#d4a373]">+91 98765 43210</p></div>
+      </a>
+
+      <a href="https://wa.me/919987661966" target="_blank" rel="noopener" class="flex items-center gap-4 text-sm group">
+       <div class="w-10 h-10 rounded-full bg-[#d4a373]/10 flex items-center justify-center text-[#d4a373]">WA</div>
+       <div><p class="text-[#b0a69a] text-xs">WhatsApp</p><p class="font-medium group-hover:text-[#d4a373]">+91 9987661966</p></div>
+      </a>
+
+      <div class="flex items-start gap-4 text-sm">
+       <div class="w-10 h-10 rounded-full bg-[#d4a373]/10 flex items-center justify-center text-[#d4a373] flex-shrink-0">⌖</div>
+       <div><p class="text-[#b0a69a] text-xs">Visit Us</p><p class="font-medium text-sm leading-relaxed">202 B Wing, Saro Darshan Tower, Beside MH High School, Agyari Lane, Talav Pali, Ghatali, Thane West</p></div>
+      </div>
+     </div>
+    </div>
+
+    <div id="book-now" class="glass-card-light rounded-2xl p-6 md:p-8">
+     <h3 class="text-xl font-serif font-bold mb-5"><span class="gold-gradient">Request</span> a Callback</h3>
+     <form id="bookingForm">
+      <div class="space-y-4">
+       <input id="name" type="text" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f]/60 border border-[#d4a373]/10 text-[#f5f0eb] placeholder:text-[#5a4f45] focus:outline-none focus:border-[#d4a373]/40 text-sm">
+       <input id="phone" type="tel" placeholder="Phone Number" required class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f]/60 border border-[#d4a373]/10 text-[#f5f0eb] placeholder:text-[#5a4f45] focus:outline-none focus:border-[#d4a373]/40 text-sm">
+       <select id="treatment" class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f]/60 border border-[#d4a373]/10 text-[#c4b8ae] focus:outline-none text-sm">
+        <option value="">Select Treatment</option>
+        <option>Hair Transplant</option><option>GFC / PRP Therapy</option><option>Vampire Facial</option>
+        <option>Hydra Facial</option><option>Botox & Fillers</option><option>Microneedling</option>
+        <option>Laser Treatment</option><option>Advanced Facial</option>
+       </select>
+       <textarea id="message" rows="3" placeholder="Tell us about your goals..." class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f]/60 border border-[#d4a373]/10 text-[#f5f0eb] placeholder:text-[#5a4f45] focus:outline-none focus:border-[#d4a373]/40 text-sm resize-none"></textarea>
+
+       <button type="submit" class="w-full btn-gold py-3.5 rounded-xl text-base flex items-center justify-center gap-2">
+        Book Free Consultation →
+       </button>
+      </div>
+     </form>
+     <p class="text-[#5a4f45] text-xs text-center mt-3">✦ We respect your privacy. No spam.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="py-12 px-4 sm:px-6 border-t border-[#d4a373]/10">
+ <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+  <a href="#home"><img src="logo.png" alt="Lumeraa Aesthetics" class="w-[190px] sm:w-[220px] h-auto"></a>
+  <div class="flex items-center gap-6 text-sm text-[#5a4f45]">
+   <a href="#" class="hover:text-[#d4a373]">Privacy</a>
+   <a href="#" class="hover:text-[#d4a373]">Terms</a>
+   <a href="#contact" class="hover:text-[#d4a373]">Contact</a>
+  </div>
+  <p class="text-[#5a4f45] text-xs">© 2026 Lumeraa Aesthetics. All rights reserved.</p>
+ </div>
+</footer>
+
+<script>
+(function () {
+    const slider = document.getElementById("beforeAfterSlider");
+    const beforeClip = document.getElementById("beforeClip");
+    const sliderLine = document.getElementById("sliderLine");
+
+    if (!slider || !beforeClip || !sliderLine) return;
+
+    let dragging = false;
+
+    function moveSlider(clientX) {
+        const rect = slider.getBoundingClientRect();
+        if (!rect.width) return;
+
+        let percentage = ((clientX - rect.left) / rect.width) * 100;
+        percentage = Math.max(0, Math.min(100, percentage));
+
+        beforeClip.style.width = percentage + "%";
+        sliderLine.style.left = percentage + "%";
+    }
+
+    function startDrag(e) {
+        dragging = true;
+        const point = e.touches ? e.touches[0] : e;
+        moveSlider(point.clientX);
+        if (e.cancelable) e.preventDefault();
+    }
+
+    function drag(e) {
+        if (!dragging) return;
+        const point = e.touches ? e.touches[0] : e;
+        moveSlider(point.clientX);
+        if (e.cancelable) e.preventDefault();
+    }
+
+    function stopDrag() {
+        dragging = false;
+    }
+
+    slider.addEventListener("mousedown", startDrag);
+    window.addEventListener("mousemove", drag);
+    window.addEventListener("mouseup", stopDrag);
+
+    slider.addEventListener("touchstart", startDrag, { passive: false });
+    window.addEventListener("touchmove", drag, { passive: false });
+    window.addEventListener("touchend", stopDrag);
+    window.addEventListener("touchcancel", stopDrag);
+})();
+</script>
+
+(() => {
+ 'use strict';
+
+ const navbar = document.getElementById('navbar');
+ const menuToggle = document.getElementById('menuToggle');
+ const closeMenu = document.getElementById('closeMenu');
+ const mobileMenu = document.getElementById('mobileMenu');
+
+ function openMenu(){
+  mobileMenu.classList.add('open');
+  document.body.style.overflow='hidden';
+ }
+ function closeMenuFn(){
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow='';
+ }
+
+ menuToggle?.addEventListener('click',openMenu);
+ closeMenu?.addEventListener('click',closeMenuFn);
+ document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click',closeMenuFn));
+
+ window.addEventListener('scroll',()=>{
+  navbar.classList.toggle('navbar-scrolled',window.scrollY>40);
+ },{passive:true});
+
+ const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+ },{rootMargin:'0px 0px -70px 0px',threshold:.1});
+
+ document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger-children')
+  .forEach(el=>observer.observe(el));
+
+ document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',e=>{
+   const selector=anchor.getAttribute('href');
+   if(selector==='#') return;
+   const target=document.querySelector(selector);
+   if(target){
+    e.preventDefault();
+    const offset=navbar.offsetHeight+12;
+    window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-offset,behavior:'smooth'});
+   }
+  });
+ });
+
+ document.getElementById('bookingForm')?.addEventListener('submit',e=>{
+  e.preventDefault();
+
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const treatment=document.getElementById('treatment').value || 'Not selected';
+  const message=document.getElementById('message').value.trim() || 'No additional message';
+
+  const text =
+   `Hello Lumeraa Aesthetics,%0A%0A`+
+   `I would like to book a consultation.%0A%0A`+
+   `Name: ${encodeURIComponent(name)}%0A`+
+   `Phone: ${encodeURIComponent(phone)}%0A`+
+   `Treatment: ${encodeURIComponent(treatment)}%0A`+
+   `Message: ${encodeURIComponent(message)}`;
+
+  window.open(`https://wa.me/919987661966?text=${text}`,'_blank');
+  e.target.reset();
+ });
+})();
+</script>
+
+</body>
+</html>
